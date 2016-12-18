@@ -67,7 +67,7 @@ int main(int argc, char* argv[])
 	glfwSetCursorPosCallback(window, mouse_callback);
 	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
-	Shader ourShader("C:\\Users\\SKIrk\\Documents\\Shaders\\shader.vs", "C:\\Users\\SKIrk\\Documents\\Shaders\\shader.frag");
+	Shader ourShader("C:\\Users\\SKIrk\\Documents\\Visual Studio 2017\\Projects\\OpenGL\\OpenGLDependencies\\Shaders\\shader.vs", "C:\\Users\\SKIrk\\Documents\\Visual Studio 2017\\Projects\\OpenGL\\OpenGLDependencies\\Shaders\\shader.frag");
 	glEnable(GL_DEPTH_TEST);
 
 	GLfloat vertices[] = {
@@ -154,7 +154,7 @@ int main(int argc, char* argv[])
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	// Load image, create texture and generate mipmaps
 	int width, height;
-	unsigned char* image = SOIL_load_image("C:\\Users\\SKIrk\\Documents\\Textures\\container.jpg", &width, &height, 0, SOIL_LOAD_RGB);
+	unsigned char* image = SOIL_load_image("C:\\Users\\SKIrk\\Documents\\Visual Studio 2017\\Projects\\OpenGL\\OpenGLDependencies\\Textures\\container.jpg", &width, &height, 0, SOIL_LOAD_RGB);
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
 	glGenerateMipmap(GL_TEXTURE_2D);
 	SOIL_free_image_data(image);
@@ -169,7 +169,7 @@ int main(int argc, char* argv[])
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	// Load image, create texture and generate mipmaps
-	image = SOIL_load_image("C:\\Users\\SKIrk\\Documents\\Textures\\awesomeface.png", &width, &height, 0, SOIL_LOAD_RGB);
+	image = SOIL_load_image("C:\\Users\\SKIrk\\Documents\\Visual Studio 2017\\Projects\\OpenGL\\OpenGLDependencies\\Textures\\awesomeface.png", &width, &height, 0, SOIL_LOAD_RGB);
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
 	glGenerateMipmap(GL_TEXTURE_2D);
 	SOIL_free_image_data(image);
